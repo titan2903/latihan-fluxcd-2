@@ -8,6 +8,6 @@ resources:
 
 configMapGenerator:
   - name: admin
-  - literals:
+    literals:
       - NAME_SERVICE=admin
       - VERSION=v1.0
