@@ -1,5 +1,6 @@
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
+namespace: core
 
 resources:
-  - core
+  - namespace.yaml
