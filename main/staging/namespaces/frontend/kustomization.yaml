@@ -4,3 +4,4 @@ namespace: frontend
 
 resources:
   - namespace.yaml
+  - admin
