@@ -5,6 +5,5 @@ kind: Kustomization
 resources:
   - core
   - backoffice
-  - core
   - frontend
   - tools
