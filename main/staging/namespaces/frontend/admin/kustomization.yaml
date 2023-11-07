@@ -7,6 +7,7 @@ resources:
   - service.yaml
 
 configMapGenerator:
+  - name: admin
   - literals:
       - NAME_SERVICE=admin
       - VERSION=v1.0
