@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
         - name: product
-          image: aditirvan/load-test:latest:latest
+          image: aditirvan/load-test:latest
           resources:
             limits:
               memory: "128Mi"
