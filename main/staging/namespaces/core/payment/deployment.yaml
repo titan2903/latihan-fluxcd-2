@@ -3,10 +3,6 @@ kind: Deployment
 metadata:
   name: payment
 spec:
-  volumes:
-    - name: payment-gw-conf
-      secret:
-        secretName: payment-secret
   selector:
     matchLabels:
       app: payment
@@ -15,6 +11,10 @@ spec:
       labels:
         app: payment
     spec:
+      volumes:
+        - name: payment-gw-conf
+          secret:
+            secretName: payment-secret
       containers:
         - name: payment
           image: nginx:latest
