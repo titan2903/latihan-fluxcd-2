@@ -4,3 +4,5 @@ namespace: backoffice
 
 resources:
   - namespace.yaml
+  - myapp-go
+  - ../../module/dockerconfigjson.yaml
