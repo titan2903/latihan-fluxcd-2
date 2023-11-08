@@ -11,6 +11,8 @@ spec:
       labels:
         app: myapp-go
     spec:
+      imagePullSecrets:
+      - name: regcred
       containers:
         - name: myapp-go
           image: titan29/app-golang:1.0
