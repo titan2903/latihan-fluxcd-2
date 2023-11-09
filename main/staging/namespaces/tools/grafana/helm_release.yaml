@@ -9,8 +9,8 @@ spec:
       chart: grafana # disesuaikan dengan `metadata.name` yang ada di folder `helm/grafana.yaml`
       # version: '4.0.x' # version tidak di gunakan, menggunakan yang paling baru
       sourceRef:
-        kind: HelmRepository  # disesuaikan dengan `kind` yang ada di folder `helm/grafana.yaml`
+        kind: HelmRepository # disesuaikan dengan `kind` yang ada di folder `helm/grafana.yaml`
         name: grafana
       interval: 1m
-  # values:
-  #   replicaCount: 1
+  values:
+    replicas: 2
