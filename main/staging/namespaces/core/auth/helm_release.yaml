@@ -10,10 +10,10 @@ spec:
       # version: '4.0.x'
       sourceRef:
         kind: GitRepository
-        name: flux-system
-        namespace: flux-system
+        name: flux-system # name harus flux-system
+        namespace: flux-system # namespace harus flux-system
       interval: 1m
   values:
     replicaCount: 2
-    image: nginx:alpine
+    image: nginx:latest
     port: 80
