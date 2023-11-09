@@ -5,3 +5,4 @@ namespace: tools
 resources:
   - namespace.yaml
   - ../../../../helm/grafana.yaml
+  - grafana

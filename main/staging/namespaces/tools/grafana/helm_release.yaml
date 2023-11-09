@@ -1,0 +1,16 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: grafana
+spec:
+  interval: 1m
+  chart:
+    spec:
+      chart: grafana # disesuaikan dengan `metadata.name` yang ada di folder `helm/grafana.yaml`
+      # version: '4.0.x' # version tidak di gunakan, menggunakan yang paling baru
+      sourceRef:
+        kind: HelmRepository  # disesuaikan dengan `kind` yang ada di folder `helm/grafana.yaml`
+        name: grafana
+      interval: 1m
+  # values:
+  #   replicaCount: 1
