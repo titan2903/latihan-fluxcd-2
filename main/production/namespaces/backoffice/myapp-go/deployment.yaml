@@ -12,7 +12,7 @@ spec:
         app: myapp-go
     spec:
       imagePullSecrets:
-      - name: regcred
+        - name: regcred
       containers:
         - name: myapp-go
           image: titan29/myapp-go-sandbox:26
