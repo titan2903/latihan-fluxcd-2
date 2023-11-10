@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapp-go
+spec:
+  selector:
+    matchLabels:
+      app: myapp-go
+  template:
+    metadata:
+      labels:
+        app: myapp-go
+    spec:
+      imagePullSecrets:
+      - name: regcred
+      containers:
+        - name: myapp-go
+          image: titan29/myapp-go-sandbox:26
+          resources:
+            limits:
+              memory: "128Mi"
+              cpu: "100m"
+            requests:
+              memory: "68Mi"
+              cpu: "10m"
+          ports:
+            - containerPort: 8060
