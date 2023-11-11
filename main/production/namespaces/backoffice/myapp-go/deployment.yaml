@@ -15,7 +15,7 @@ spec:
         - name: regcred
       containers:
         - name: myapp-go
-          image: titan29/myapp-go-sandbox:28 # {"$imagepolicy": "flux-system:myapp-go-sandbox"}
+          image: titan29/myapp-go-sandbox:29 # {"$imagepolicy": "flux-system:myapp-go-sandbox"}
           resources:
             limits:
               memory: "128Mi"
