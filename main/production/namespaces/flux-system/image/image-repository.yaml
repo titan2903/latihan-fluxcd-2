@@ -1,0 +1,10 @@
+apiVersion: image.toolkit.fluxcd.io/v1beta2
+kind: ImageRepository
+metadata:
+  name: myapp-go-sandbox # bisa di samain dengan nama image di docker hub
+  namespace: flux-system
+spec:
+  image: titan29/myapp-go-sandbox
+  interval: 1m
+  secretRef:
+    name: regcred
