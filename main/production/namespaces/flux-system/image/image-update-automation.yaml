@@ -1,0 +1,24 @@
+apiVersion: image.toolkit.fluxcd.io/v1beta1
+kind: ImageUpdateAutomation
+metadata:
+  name: flux-system
+  namespace: flux-system
+spec:
+  interval: 1m
+  sourceRef: # bakal ambil dari Git Repository yang ada di minikube
+    kind: GitRepository
+    name: flux-system
+  git:
+    checkout: # melakukan checkout atau cloning
+      ref:
+        branch: master
+    commit:
+      author:
+        email: fluxcdbot@users.noreply.github.com # bisa di sesuaikan dengan kebutuhan
+        name: fluxcdbot # bisa di sesuaikan dengan kebutuhan
+      messageTemplate: 'Update new Image: {{range .Updated.Images}}{{println .}}{{end}}' # Commit message
+    push:
+      branch: master
+  update:
+    path: ./main/production/namespaces
+    strategy: Setters
