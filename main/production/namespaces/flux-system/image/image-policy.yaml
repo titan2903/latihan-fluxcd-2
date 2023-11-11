@@ -5,7 +5,7 @@ metadata:
   namespace: flux-system
 spec:
   imageRepositoryRef:
-    name: podinfo
+    name: myapp-go-sandbox
   policy:
     numerical:
       order: asc # image paling update
